@@ -25,14 +25,14 @@
 // |  A  |  S  |  D  |  F  |
 // |     |     |     |  BSPC  |  SPACE  |  
                         bindings = <
-   &kp Q &kp W &kp E &kp R
-   &kp A &kp S &kp D &kp F
-                     &kp BSPC &kp SPACE
+   &kp Q   &kp W   &kp E   &kp R
+   &kp A   &kp S   &kp D   &kp F
+                           &kp BSPC   &kp SPACE
                         >;
         };
 
-        lower_layer {
-            display-name = "LOW";
+        number_layer {
+            display-name = "NUM";
 // -------------------------
 // |  1  |  2  |  3  |  4  |
 // |  5  |  6  |  7  |  8  |
@@ -40,14 +40,17 @@
                         bindings = <
    &kp N1       &kp N2       &kp N3       &kp N4
    &kp N5       &kp N6       &kp N7       &kp N8
-                             &kp LGUI     &kp SPACE
+                             &kp BSPC     &kp SPACE
                         >;
         };
 
-        raise_layer {
-            display-name = "RAI";
-            status = "reserved";
+        ctrl_layer {
+            display-name = "CTRL";
+   &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT
+   &kp LGUI     &kp ALT      &kp CTRL     &kp N8
+                             &kp BSPC     &kp SPACE
         };
+        
         extra_1 {
             status = "reserved";
         };
