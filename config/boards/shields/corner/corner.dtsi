@@ -5,58 +5,50 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &corner_6col_layout;
+        zmk,physical-layout = &default_layout;
     };
 
     kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
+        compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
-
-        diode-direction = "col2row";
-        row-gpios
-            = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
-
-        col-gpios
-            = <&pro_micro 21 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 20 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        input-gpios
+            = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 8  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 
-    corner_6col_layout: corner_6col_layout {
+    default_layout: default_layout {
         compatible = "zmk,physical-layout";
         display-name = "10 keys";
         transform = <&default_transform>;
-
         keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0   37       0     0     0>
-            , <&key_physical_attrs 100 100  100   37       0     0     0>
-            , <&key_physical_attrs 100 100  200   12       0     0     0>
+            = <&key_physical_attrs 100 100    0    0       0     0     0>
+            , <&key_physical_attrs 100 100  100    0       0     0     0>
+            , <&key_physical_attrs 100 100  200    0       0     0     0>
             , <&key_physical_attrs 100 100  300    0       0     0     0>
-            , <&key_physical_attrs 100 100  400   12       0     0     0>
-            , <&key_physical_attrs 100 100  500   24       0     0     0>
-            , <&key_physical_attrs 100 100  800   24       0     0     0>
-            , <&key_physical_attrs 100 100  900   12       0     0     0>
-            , <&key_physical_attrs 100 100 1000    0       0     0     0>
-            , <&key_physical_attrs 100 100 1100   12       0     0     0>
+            , <&key_physical_attrs 100 100    0  100       0     0     0>
+            , <&key_physical_attrs 100 100  100  100       0     0     0>
+            , <&key_physical_attrs 100 100  200  100       0     0     0>
+            , <&key_physical_attrs 100 100  300  100       0     0     0>
+            , <&key_physical_attrs 100 100  300  200       0     0     0>
+            , <&key_physical_attrs 100 100  400  200       0     0     0>
         ;
     };
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <10>;
         rows = <1>;
+        columns = <10>;
         map = <0 1 2 3 4 5 6 7 8 9>;
     };
-
-
 
 };
 
