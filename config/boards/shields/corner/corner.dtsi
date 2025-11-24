@@ -4,7 +4,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &corne_6col_layout;
+        zmk,physical-layout = &corner_6col_layout;
     };
 
     kscan0: kscan {
@@ -29,9 +29,9 @@
             ;
     };
 
-    corne_6col_layout: corne_6col_layout {
+    corner_6col_layout: corner_6col_layout {
         compatible = "zmk,physical-layout";
-        display-name = "6 Column";
+        display-name = "10 keys";
         transform = <&default_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry

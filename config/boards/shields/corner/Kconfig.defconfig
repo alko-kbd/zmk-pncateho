@@ -1,6 +1,6 @@
 
 config ZMK_KEYBOARD_NAME
-    default "Corne"
+    default "Corner"
 
 config ZMK_SPLIT
     default n

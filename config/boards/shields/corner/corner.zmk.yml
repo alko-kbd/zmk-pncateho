@@ -1,6 +1,6 @@
 file_format: "1"
-id: corne
-name: Corne
+id: corner
+name: Corner
 type: shield
 url: https://github.com/foostan/crkbd/
 requires: [pro_micro]
