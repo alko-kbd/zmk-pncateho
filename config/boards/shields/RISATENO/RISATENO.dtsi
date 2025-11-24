@@ -48,7 +48,7 @@
             key_9 { row = <2>; column = <4>; };
         };
         
-        transform = &default_transform;
+        transform = <&default_transform>;
     };
     
     default_transform: keymap_transform_0 {
