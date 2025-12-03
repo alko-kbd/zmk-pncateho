@@ -1,6 +1,3 @@
-# Copyright (c) aroum
-# https://github.com/aroum/PNCATEHO
-# Right half removed by alko
 
 #define TCOMBO(NAME, BINDINGS, INNER_BINDINGS, OUTER_BINDINGS,  BOTH_BINDINGS, LEFT_KEYPOS) \
 combo_l_##NAME { \
