@@ -1,17 +1,15 @@
-# ZMK PNCATEHO Layout Firmware
+# ZMK Firmware for handwired RISATENO
 
-PNCATEHO with ZMK Studio support.
+Used chords by aroum [zmk-PNCATEHO](https://github.com/aroum/zmk-PNCATEHO). Left half only.
 
-[Hardware repository](https://github.com/aroum/PNCATEHO)
+Pins optimized for handwired.
+
+Prepared for ZMK Studio.
 
 # Layout
 
-![PNCATEHO_dual_KLE](pics/PNCATEHO_dual_KLE.png)
+![RISATENO_left](pics/risateno_left.png)
 
 # Pins and fingers
 
-![pin_fingers_layout](pics/pin_fingers_layout.png)
-
-
-
-
+![pin_fingers_layout](pics/risateno_pin_fingers_layout.png)

@@ -2,7 +2,7 @@ file_format: "1"
 id: risateno
 name: RISATENO
 type: shield
-url: https://github.com/alko-kbd/zmk-pncateho/
+url: https://github.com/alko-kbd/zmk-risateno/
 requires: [pro_micro]
 features:
   - keys
